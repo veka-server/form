@@ -1,6 +1,6 @@
 <?php
 
-namespace App\exception;
+namespace VekaServer\TableForm\Exception;
 
 class ClientException extends \Exception
 {

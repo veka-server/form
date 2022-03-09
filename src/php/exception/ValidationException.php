@@ -1,6 +1,6 @@
 <?php
 
-namespace App\exception;
+namespace VekaServer\TableForm\Exception;
 
 class ValidationException extends ClientException
 {
