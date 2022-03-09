@@ -1,0 +1,21 @@
+{
+    "name": "veka-server/form",
+    "description": "Une lib PHP / JS / CSS de gestion des formulaires, des tableau et des popin",
+    "license": "MIT",
+    "keywords": ["minimalist", "form", "validation", "table", "popin","php", "js"],
+    "authors": [
+        {
+            "name": "Vanhaezebrouck Nicolas",
+            "email": "contact@veka-server.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VekaServer\\TableForm\\" : "src/php/"
+            ,"VekaServer\\TableForm\\Exception\\" : "src/php/exception/"
+        }
+    },
+    "require": {
+        "veka-server/app": "^0.3.4"
+    }
+}
