@@ -2,7 +2,7 @@
 
 namespace VekaServer\TableForm;
 
-use App\exception\ValidationException;
+use VekaServer\TableForm\Exception\ValidationException;
 use VekaServer\Framework\Lang;
 use VekaServer\Framework\Log;
 

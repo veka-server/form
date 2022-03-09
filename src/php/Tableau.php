@@ -1,10 +1,11 @@
 <?php
 namespace VekaServer\TableForm;
 
-use App\exception\ClientException;
-use App\model\Model;
+use VekaServer\TableForm\Exception\ClientException;
+use VekaServer\TableForm\Model;
 use VekaServer\Framework\Lang;
 use VekaServer\Framework\Log;
+use VekaServer\Framework\Controller;
 
 class Tableau extends Controller
 {
