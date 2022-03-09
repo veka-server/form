@@ -37,7 +37,7 @@ class Forms extends Controller
 
     public function getHtml(): string
     {
-        return $this->getView('common/forms/form.twig',[
+        return $this->getView('forms/form.twig',[
             'datas' => $this->datas
             ,'fields' => $this->fields
             ,'size' => $this->size
