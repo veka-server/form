@@ -17,5 +17,6 @@
     },
     "require": {
         "veka-server/app": "^0.3.4"
+        "veka-server/interfaces": "^0.3.4"
     }
 }
