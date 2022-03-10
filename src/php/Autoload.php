@@ -2,7 +2,9 @@
 
 namespace VekaServer\TableForm;
 
-class Autoload
+use VekaServer\Interfaces\PluginInterface;
+
+class Autoload implements PluginInterface
 {
 
     public static function getPathView(){
