@@ -27,7 +27,7 @@ class Tableau extends Controller
     /** retourne le html du tableau sans les données */
     public function getHtmlWithoutData():string
     {
-        return $this->getView('table/table.twig',[
+        return $this->getView('@TableForm/table/table.twig',[
             'columns' => $this->columns
             ,'urlListe' => $this->urlListe
             ,'urlExport' => $this->urlExport
@@ -58,7 +58,7 @@ class Tableau extends Controller
 
     public function getHtmlData()
     {
-        return $this->getView('table/data.twig',[
+        return $this->getView('@TableForm/table/data.twig',[
             'cleaned_data' => $this->cleaned_data
             ,'data' => $this->datas
             ,'actions' => $this->actions

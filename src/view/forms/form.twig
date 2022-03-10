@@ -3,7 +3,7 @@
     <form action="{{ url }}">
         <div class="col_grid">
             {% for input in fields %}
-                {{ include('forms/input.twig') }}
+                {{ include('@TableForm/forms/input.twig') }}
             {% endfor %}
         </div>
     </form>
