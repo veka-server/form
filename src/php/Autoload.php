@@ -7,7 +7,7 @@ use VekaServer\Abstract\PluginAbstract;
 class Autoload extends PluginAbstract
 {
 
-    private static function getAllRequiredPlugin(){
+    protected static function getAllRequiredPlugin():array {
         return [\VekaServer\Jquery\Autoload::class];
     }
 
