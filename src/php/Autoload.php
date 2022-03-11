@@ -2,21 +2,25 @@
 
 namespace VekaServer\TableForm;
 
-use VekaServer\Interfaces\PluginInterface;
+use VekaServer\Abstract\PluginAbstract;
 
-class Autoload implements PluginInterface
+class Autoload extends PluginAbstract
 {
 
-    public static function getPathView():array {
+    private static function getAllRequiredPlugin(){
+        return [\VekaServer\Jquery\Autoload::class];
+    }
+
+    protected static function getCSS():array {
+        return [dirname(__DIR__).DIRECTORY_SEPARATOR.'css'];
+    }
+
+    protected static function getJS():array {
+        return [dirname(__DIR__).DIRECTORY_SEPARATOR.'js'];
+    }
+
+    protected static function getVIEW():array {
         return [ 'TableForm' => dirname(__DIR__).DIRECTORY_SEPARATOR.'view'];
-    }
-
-    public static function getPathJS():string {
-        return dirname(__DIR__).DIRECTORY_SEPARATOR.'js';
-    }
-
-    public static function getPathCSS():string {
-        return dirname(__DIR__).DIRECTORY_SEPARATOR.'css';
     }
 
 }
