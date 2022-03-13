@@ -8,7 +8,7 @@ class Autoload extends PluginAbstract
 {
 
     protected static function getAllRequiredPlugin():array {
-        return [\VekaServer\Jquery\Autoload::class];
+        return [\VekaServer\Jquery\Autoload::class, \VekaServer\Popin\Autoload::class];
     }
 
     protected static function getCSS():array {
