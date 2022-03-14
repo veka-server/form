@@ -18,7 +18,7 @@
     "require": {
         "veka-server/app": "^0.3.4",
         "veka-server/abstract": "^0.0.4",
-        "veka-server/popin": "^0.0.4",
+        "veka-server/popin": "^0.0.5",
         "veka-server/jquery": "^0.0.4"
     }
 }
