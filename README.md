@@ -17,3 +17,10 @@ Ajouter la route de fontawesome => veka-server/fontawesome
 ```
 Consulter le readme de veka-server/fontawesome
 ```
+
+Ajouter les traductions de la popin => veka-server/popin
+```
+Consulter le readme de veka-server/popin
+```
+
+
