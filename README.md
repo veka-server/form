@@ -12,3 +12,8 @@ Informer le framework que la lib est presente en exditant le fichier config/plug
 // ajouter la ligne dans le tableau retourné par le fichier
 \VekaServer\TableForm\Autoload::class
 ```
+
+Ajouter la route de fontawesome => veka-server/fontawesome
+```
+Consulter le readme de veka-server/fontawesome
+```
