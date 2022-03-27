@@ -19,11 +19,11 @@ class Contrainte
         try{
 
             $methode = base64_decode($_POST['check'] ?? '');
-            if (method_exists(__CLASS__, $methode) === false) {
-                throw new \Exception('skiiip');
+            if (method_exists(static::class, $methode) === false) {
+                throw new \Exception('tentative de contrainte sur une methode inexistante : '.static::class.'::'.$methode);
             }
 
-            call_user_func(array(__CLASS__, $methode));
+            call_user_func(array(static::class, $methode));
 
             $retour['success'] = true;
             $retour['contrainte_failed'] = false;
@@ -43,13 +43,6 @@ class Contrainte
         }
 
         return json_encode( $retour);
-    }
-
-    public static function check_email_doublon(){
-        $is_email_already_exist = \App\model\Utilisateur::isEmailAlreadyExist($_POST['email'] ?? null, $_POST['id_utilisateur'] ?? null);
-        if($is_email_already_exist === true){
-            throw new ValidationException(Lang::get('validation::check_email_doublon::email'));
-        }
     }
 
 }
