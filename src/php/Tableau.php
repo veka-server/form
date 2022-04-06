@@ -62,6 +62,7 @@ class Tableau extends Controller
             'cleaned_data' => $this->cleaned_data
             ,'data' => $this->datas
             ,'actions' => $this->actions
+            ,'columns' => $this->columns
         ]);
     }
 
