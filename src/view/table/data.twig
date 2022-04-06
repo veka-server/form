@@ -1,7 +1,18 @@
 {% for key_ligne,ligne in cleaned_data %}
     <tr>
     {% for key,value in ligne %}
-            <td data-label="{{ key }}">{{ value }}</td>
+            <td data-label="{{ key }}">
+                {% set alreay_write = false %}
+                {% for column in columns %}
+                    {% if column['key'] == key and column.date == true %}
+                        {{ value | date( column.date_format ?? "m/d/Y H:i:s", column.timezone ?? null ) }}
+                        {% set alreay_write = true %}
+                    {% endif %}
+                {% endfor %}
+                {% if alreay_write == false %}
+                    {{ value }}
+                {% endif %}
+            </td>
     {% endfor %}
         <td class="action_column">
         {% for action in actions %}
